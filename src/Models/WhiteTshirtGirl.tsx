@@ -96,7 +96,12 @@ export function WhiteTshirtGirlModel(props: JSX.IntrinsicElements['group']) {
 
    }
 
-  }
+  } 
+
+//insial rendering for user
+  useEffect(()=>{
+ actions.idle?.reset().play()
+  },[])
   useEffect(() => {
     let action: ActionName = 'idle'
     if (forward || backword || left || right) {
